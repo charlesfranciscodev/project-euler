@@ -29,9 +29,9 @@ if __name__ == "__main__":
     best_b = 0
     for a in range(-999, 1000):
         for b in range(-999, 1000):
-              n = nb_consecutive_primes(a, b)
-              if n > max_n:
-                  max_n = n
-                  best_a = a
-                  best_b = b
+            n = nb_consecutive_primes(a, b)
+            if n > max_n:
+                max_n = n
+                best_a = a
+                best_b = b
     print(best_a * best_b)
