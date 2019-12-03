@@ -11,7 +11,7 @@ def is_prime(i):
     return True
 
 
-def largest_prime_factor(x):
+def largest_prime_factor(x=600851475143):
     max_factor = 1
     i = 2
     end = math.floor(math.sqrt(x)) + 1
@@ -24,4 +24,5 @@ def largest_prime_factor(x):
 
 
 if __name__ == "__main__":
-    print(largest_prime_factor(int(input())))
+    x = int(input())
+    print(largest_prime_factor(x))

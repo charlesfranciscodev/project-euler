@@ -2,13 +2,13 @@
 # Answer: 9183
 
 
-def distinct_powers(start_a, end_a, start_b, end_b):
+def distinct_powers(start=2, end=100):
     powers = set()
-    for a in range(start_a, end_a + 1):
-        for b in range(start_b, end_b + 1):
+    for a in range(start, end + 1):
+        for b in range(start, end + 1):
             powers.add(a ** b)
-    return powers
+    return len(powers)
 
 
-start_a, end_a, start_b, end_b = map(int, input().split())
-print(len(distinct_powers(start_a, end_a, start_b, end_b)))
+start, end = map(int, input().split())
+print(distinct_powers(start=start, end=end))

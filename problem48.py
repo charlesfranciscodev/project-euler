@@ -2,8 +2,12 @@
 # Answer: 9110846700
 
 
-if __name__ == "__main__":
+def self_powers(limit=1001):
     total = 0
-    for x in range(1, 1001):
+    for x in range(1, limit):
         total += x ** x
-    print(total)
+    return str(total)[-10:]
+
+
+if __name__ == "__main__":
+    print(self_powers())

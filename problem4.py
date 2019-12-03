@@ -7,7 +7,7 @@ def is_palindrome(number):
     return s == s[::-1]
 
 
-def largest_palindrome(nb_digits):
+def largest_palindrome(nb_digits=3):
     min_value = 10 ** (nb_digits - 1)
     max_value = 10 ** nb_digits
     max_product = 0
@@ -20,5 +20,6 @@ def largest_palindrome(nb_digits):
 
 
 if __name__ == "__main__":
-    print("Enter the number of digits: ", end='')
-    print(largest_palindrome(int(input())))
+    print("Enter the number of digits: ")
+    nb_digits = int(input())
+    print(largest_palindrome(nb_digits=nb_digits))

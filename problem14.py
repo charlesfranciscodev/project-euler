@@ -13,7 +13,7 @@ def len_collatz_sequence(x):
     return count
 
 
-def solve(max_start_value):
+def solve(max_start_value=10**6):
     max_count = 1
     value_for_longest_chain = 1
     for i in range(3, max_start_value):
@@ -24,5 +24,4 @@ def solve(max_start_value):
     return value_for_longest_chain
 
 
-max_start_value = 1000000
-print(solve(max_start_value))
+print(solve())
