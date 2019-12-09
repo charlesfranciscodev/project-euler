@@ -1,13 +1,13 @@
-# Double-base palindromes
+# Coded triangle numbers
 # Answer: 162
 
 
 def triangle_numbers(limit):
-    numbers = [1]
+    numbers = {1}
     index = 2
-    while numbers[-1] < limit:
-        next_number = index * (index + 1) / 2
-        numbers.append(next_number)
+    while max(numbers) < limit:
+        number = index * (index + 1) / 2
+        numbers.add(number)
         index += 1
     return numbers
 
@@ -36,5 +36,5 @@ if __name__ == "__main__":
         for word in words:
             max_len = max(max_len, len(word))
         limit = max_len * 26
-        numbers = set(triangle_numbers(limit))
+        numbers = triangle_numbers(limit)
         print(solve(words, numbers))
