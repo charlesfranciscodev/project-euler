@@ -4,11 +4,11 @@
 
 def triangle_numbers(limit):
     numbers = {1}
-    index = 2
+    n = 2
     while max(numbers) < limit:
-        number = index * (index + 1) / 2
+        number = n * (n + 1) / 2
         numbers.add(number)
-        index += 1
+        n += 1
     return numbers
 
 
