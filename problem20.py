@@ -4,7 +4,7 @@
 import math
 
 
-def factorial_digit_sum(n=10**3):
+def factorial_digit_sum(n=10**2):
     return sum(map(int, list(str(math.factorial(n)))))
 
 
